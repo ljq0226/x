@@ -24,7 +24,7 @@ export default function Home() {
       {
         accentArr.map((item: any) => {
           return (
-            <div>
+            <div key={item}>
               <button className="" onClick={() => {
                 setAccent(item)
               }}>{item}</button>

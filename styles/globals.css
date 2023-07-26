@@ -61,7 +61,7 @@ body {
   }
 
   body {
-    @apply hover-animation bg-main-background ;
+    @apply hover-animation bg-main-background  text-light-primary dark:text-dark-primary;
   }
 }
 @layer components {
