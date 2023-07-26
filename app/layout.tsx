@@ -17,6 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>X</title>
+        <meta name="description" content="x twitter social" />
+        <link rel="icon" href="/x-icon.svg" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )

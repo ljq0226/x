@@ -13,6 +13,8 @@ export default function Home() {
   const accentArr = ['blue', 'orange', 'yellow', 'pink', 'green', 'purple']
   return (
     <div>
+      <div className="w-10 h-10 bg-red-400 rounded-full">
+      </div>
       <header>
         <select onChange={(evt) => {
           i18n.changeLanguage(evt.target.value)
