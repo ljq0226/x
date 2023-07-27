@@ -65,7 +65,13 @@ body {
   }
 }
 @layer components {
+  .flex-center{
+    @apply justify-center items-center
+  }
   .hover-animation {
     @apply transition-colors duration-200;
+  }
+  .custom-button {
+    @apply hover-animation rounded-full p-3 disabled:cursor-not-allowed disabled:opacity-50;
   }
 }

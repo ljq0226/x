@@ -1,65 +1,13 @@
-'use client'
-import { Trans, useTranslation } from 'react-i18next'
-import useTheme from '@/hooks/useTheme'
-import i18n from '@/lib/i18n'
+import { Sidebar } from '@/components/sidebar/SideBar'
+import Home from '@/components/home/Home'
+import Aside from '@/components/aside/Aside'
 
-export default function Home() {
-  const lngs: any = {
-    en: { nativeName: 'English' },
-    zh: { nativeName: '中文' },
-  }
-  const { t } = useTranslation()
-  const { theme, accent, setTheme, setAccent } = useTheme()
-  const accentArr = ['blue', 'orange', 'yellow', 'pink', 'green', 'purple']
+export default function App() {
   return (
-    <div>
-      <div className="w-10 h-10 bg-red-400 rounded-full">
-      </div>
-      <header>
-        <select onChange={(evt) => {
-          i18n.changeLanguage(evt.target.value)
-        }}>
-          {Object.keys(lngs).map(lng => (
-            <option key={lng} value={lng} label={lngs[lng].nativeName}
-              style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} />
-          ))}
-        </select>
-      </header>
-
-      <p>
-        {t('welcome')}
-      </p>
-
-      <Trans i18nKey="author">
-        作者是: <code>{theme}</code>
-      </Trans>
-      <div className="underline">test</div>
-      <button onClick={() => {
-        if (theme === 'light')
-          setTheme('dark')
-        else
-          setTheme('light')
-      }}>修改 theme</button>
-      <br />
-
-      theme:{theme}
-      <br />
-      accent:{accent}
-      <div className="text-main-accent">
-        asd
-      </div>
-      {
-        accentArr.map((item: any) => {
-          return (
-            <div key={item}>
-              <button className="" onClick={() => {
-                setAccent(item)
-              }}>{item}</button>
-            </div>
-          )
-        })
-      }
-
+    <div className="flex justify-center w-full h-screen gap-0 lg:gap-4">
+      <Sidebar />
+      <Home />
+      <Aside />
     </div>
   )
 }

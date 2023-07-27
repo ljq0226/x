@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import '@/lib/i18n'
+import '@/lib'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -22,7 +22,9 @@ export default function RootLayout({
         <meta name="description" content="x twitter social" />
         <link rel="icon" href="/x-icon.svg" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   )
 }
