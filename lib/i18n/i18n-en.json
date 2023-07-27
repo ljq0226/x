@@ -1,4 +1,9 @@
 {
-  "welcome": "Welcome to my website",
-  "author": "Author is：<1>code and beast</1>"
+  "Tweet": "Tweet",
+  "Home": "Home",
+  "Explore": "Explore",
+  "Messages": "Messages",
+  "Notifications": "Notifications",
+  "Bookmarks": "Bookmarks",
+  "Lists": "List"
 }
