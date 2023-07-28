@@ -1,8 +1,9 @@
+'use client'
 import { useTranslation } from 'react-i18next'
 
-function useTranslate() {
+function useI18n() {
   const { t } = useTranslation()
   return t
 }
 
-export default useTranslate
+export default useI18n

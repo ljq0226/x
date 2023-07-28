@@ -1,45 +1,60 @@
-import type { IconName } from '../ui/HeroIcon'
-
 export interface NavLink {
   href: string
   linkName: string
-  iconName: IconName
+  iconName: string
   disabled?: boolean
   canBeHidden?: boolean
+  addPadding?: boolean
 }
 
 export const NavLinks: Readonly<NavLink[]> = [
   {
     href: '/home',
-    linkName: 'Home',
-    iconName: 'HomeIcon',
-  },
-  {
-    href: '/explore',
-    linkName: 'Explore',
-    iconName: 'HashtagIcon',
-    canBeHidden: true,
+    linkName: 'nav.home',
+    iconName: 'ri:home-5-line',
   },
   {
     href: '/notifications',
-    linkName: 'Notifications',
-    iconName: 'BellIcon',
+    linkName: 'nav.notifications',
+    iconName: 'ri:notification-4-line',
   },
   {
-    href: '/messages',
-    linkName: 'Messages',
-    iconName: 'EnvelopeIcon',
+    href: '/conversations',
+    linkName: 'nav.conversations',
+    iconName: 'ri:at-line',
+  },
+  {
+    href: '/favorites',
+    linkName: 'nav.favourites',
+    iconName: 'ri:star-line',
   },
   {
     href: '/bookmarks',
-    linkName: 'Bookmarks',
-    iconName: 'BookmarkIcon',
+    linkName: 'nav.bookmarks',
+    iconName: 'ri:bookmark-line',
+  },
+  {
+    href: '/compose',
+    linkName: 'nav.compose',
+    iconName: 'ri:quill-pen-line',
+    addPadding: true,
+  },
+  {
+    href: '/explore',
+    linkName: 'nav.explore',
+    iconName: 'line-md:hash-small',
     canBeHidden: true,
   },
   {
     href: '/lists',
-    linkName: 'Lists',
-    iconName: 'Bars3BottomLeftIcon',
+    linkName: 'nav.lists',
+    iconName: 'ri:list-unordered',
     canBeHidden: true,
+  },
+  {
+    href: '/settings',
+    linkName: 'nav.settings',
+    iconName: 'ri:settings-3-line',
+    addPadding: true,
   },
 ]

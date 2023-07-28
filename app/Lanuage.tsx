@@ -1,5 +1,5 @@
 'use client'
-import useTranslate from '../hooks/useTranslate'
+import useTranslate from '../hooks/useI18n'
 import i18n from '@/lib/i18n'
 
 function Lanuage() {

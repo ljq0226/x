@@ -1,9 +1,4 @@
-import '@/styles/globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import StyledComponentsRegistry from '@/lib/AntdRegistry'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Share Your Mind',
@@ -21,10 +16,8 @@ export default function RootLayout({
         <meta name="description" content="x twitter social" />
         <link rel="icon" href="/x-icon.svg" />
       </head>
-      <body className={inter.className}>
-        <StyledComponentsRegistry>
+      <body >
           {children}
-        </StyledComponentsRegistry>
       </body>
     </html>
   )

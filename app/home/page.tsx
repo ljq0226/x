@@ -1,4 +1,3 @@
-'use client'
 import { Sidebar } from '@/components/sidebar/SideBar'
 import Home from '@/components/home/Home'
 import Aside from '@/components/aside/Aside'
@@ -9,7 +8,6 @@ export default function App() {
       <Sidebar />
       <Home />
       <Aside />
-
     </div>
   )
 }
