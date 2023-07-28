@@ -1,3 +1,4 @@
 import ThemeStore from './theme'
+import ModalStore from './modal'
 
-export { ThemeStore }
+export { ThemeStore, ModalStore }
